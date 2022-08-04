@@ -9,6 +9,12 @@ Drop whatsapp label image and invoice pdf into media directory.
 Then run the executable - `pdfstitch`.
 It would generate new pdfs with name - `final{count}.pdf` you can go ahead and print this. 
 
+**To compile**
+```
+chmod +x build.sh
+./build.sh
+```
+
 ## Why on github
 This is a demonstration of how to run shell scripts using golang. 
 
