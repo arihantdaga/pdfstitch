@@ -1,4 +1,4 @@
-# PdfStich
+# PdfStitch
 A simple Golang utility to stich images and pdsf into one pdf.
 
 ## Story
