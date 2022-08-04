@@ -8,5 +8,7 @@ My friend who was running online business as amazon seller, i noticed that he ha
 Drop whatsapp label image and invoice pdf into media directory. 
 Then run the executable - `pdfstitch`.
 It would generate new pdfs with name - `final{count}.pdf` you can go ahead and print this. 
- 
+
+## Why on github
+This is a demonstration of how to run shell scripts using golang. 
 

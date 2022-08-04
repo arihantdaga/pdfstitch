@@ -8,7 +8,6 @@ import (
 	"os/exec"
 	"path/filepath"
 	"strings"
-	// "gopkg.in/gographics/imagick.v3/imagick"
 )
 
 const MEDIA_DIRECTORY = "./media/"
@@ -17,17 +16,7 @@ var counter = 0
 
 func main() {
 	fmt.Println("Starting...")
-	// PDF_NAMES := []string{
-	// 	"AmazonFile_0.pdf",
-	// }
-	// imagick.Initialize()
-	// defer imagick.Terminate()
-	// mw := imagick.NewMagickWand()
-	// defer mw.Destroy()
-	// LoadPDF(PDF_NAMES[0], mw)
 	readMediaDirectory()
-	// executeCommand("sleep", "3")
-	// executeCommand("sleep", "2")
 }
 
 func readMediaDirectory() {
@@ -119,29 +108,4 @@ func executeCommand(command string, args ...string) {
 	cmd.Stdout = os.Stdout
 	cmd.Stderr = os.Stderr
 	cmd.Run()
-	// time.Sleep(3 * time.Second)
 }
-
-// func LoadPDF(f string, mw *imagick.MagickWand) {
-// 	mw.SetImageAlphaChannel(imagick.ALPHA_CHANNEL_DEACTIVATE)
-// 	mw.SetImageAlpha(0)
-// 	mw.ReadImage(MEDIA_DIRECTORY + f)
-// 	mw.SetIteratorIndex(0)
-// 	mw.SetImageAlphaChannel(imagick.ALPHA_CHANNEL_DEACTIVATE)
-// 	mw.SetImageAlpha(0)
-// 	mw.SetImageFormat("jpg")
-// 	mw.SetImageAlphaChannel(imagick.ALPHA_CHANNEL_DEACTIVATE)
-// 	mw.SetImageAlpha(0)
-// 	mw.WriteImage("out.jpg")
-// 	fmt.Println("Done")
-// }
-
-// convert  -density 300 -resize 1100x1649^ -background white -alpha remove ./media/AmazonFile_0.pdf invoice.jpg
-// convert  -density 300 -resize 1100x1649^ -background white -alpha remove './media/WhatsApp Image 2022-07-25 at 1.21.29 AM.jpeg' label.jpg
-
-// convert label.jpg invoice.jpg -gravity South +append top.jpg
-// convert label.jpg out.jpg -gravity South +append bottom.jpg
-// convert top.jpg bottom.jpg -append final.jpg
-// convert final.jpg -quality 100  final.pdf
-
-// # Cleanup
