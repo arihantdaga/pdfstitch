@@ -66,12 +66,12 @@ func readMediaDirectory() {
 	}
 }
 func step1(invoiceFileName string) {
-	args := strings.Fields("-density 300 -resize 987x1480^ -background white -alpha remove ")
+	args := strings.Fields("-density 100 -resize 987x1480^ -background white -alpha remove ")
 	args = append(args, invoiceFileName, "invoice.jpg")
 	executeCommand("convert", args...)
 }
 func step2(labelFileName string) {
-	args := strings.Fields("-density 300 -resize 987x1480^ -background white -alpha remove ")
+	args := strings.Fields("-density 100 -resize 987x1480^ -background white -alpha remove ")
 	args = append(args, labelFileName, "label.jpg")
 	executeCommand("convert", args...)
 }
